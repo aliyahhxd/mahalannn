@@ -1,44 +1,59 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #ff9ecb, #ffc0cb);
   overflow: hidden;
   text-align: center;
 }
 
+/* HEARTS BACKGROUND */
+.hearts::before {
+  content: "💖 💕 💗 💞 💓 💖 💕";
+  position: absolute;
+  width: 100%;
+  font-size: 2rem;
+  animation: float 8s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* CARD */
 .card {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  padding: 40px;
+  width: 92%;
+  max-width: 520px;
+  padding: 30px 20px;
   border-radius: 25px;
-  width: 90%;
-  max-width: 450px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  transition: 0.5s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  transition: 0.4s ease;
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #ff4d88;
+  font-size: 2.6rem;
+  color: #ff3f7f;
 }
 
 .question {
-  font-size: 1.8rem;
-  margin: 20px 0;
+  font-size: 2rem;
+  margin: 15px 0;
 }
 
+/* GIFS */
 .gif {
-  width: 150px;
+  width: 170px;
 }
 
 .spongebob {
-  width: 100px;
-  position: absolute;
-  bottom: -40px;
-  right: -20px;
+  width: 110px;
+  margin-top: 10px;
 }
 
 /* BUTTONS */
@@ -47,13 +62,13 @@ h1 {
 }
 
 button {
-  font-size: 1.5rem;
-  padding: 12px 25px;
+  font-size: 1.8rem;
+  padding: 14px 28px;
   margin: 10px;
   border: none;
-  border-radius: 15px;
+  border-radius: 18px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 #yesBtn {
@@ -61,16 +76,8 @@ button {
   color: white;
 }
 
-#yesBtn:hover {
-  background: #ff1a66;
-}
-
 #noBtn {
-  background: #ddd;
-}
-
-#noBtn:hover {
-  background: #bbb;
+  background: #eee;
 }
 
 /* LOVE SCREEN */
@@ -80,7 +87,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
-  transition: 0.6s ease;
+  transition: 0.5s ease;
 }
 
 .love-screen.active {
@@ -89,22 +96,15 @@ button {
 }
 
 .couple {
-  width: 250px;
+  width: 300px;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* FLOATING HEARTS */
-.hearts::before,
-.hearts::after {
-  content: "💖 💗 💕 💓 💞";
-  position: absolute;
-  width: 100%;
-  font-size: 2rem;
-  animation: float 10s linear infinite;
-}
-
-@keyframes float {
-  from { transform: translateY(100vh); }
-  to { transform: translateY(-10vh); }
+/* MOBILE */
+@media (max-width: 600px) {
+  h1 { font-size: 2.1rem; }
+  .question { font-size: 1.5rem; }
+  button { font-size: 1.5rem; }
 }
