@@ -6,7 +6,7 @@ body {
   text-align: center;
 }
 
-/* HEARTS BACKGROUND */
+/* 💗 FLOATING HEARTS */
 .hearts::before {
   content: "💖 💕 💗 💞 💓 💖 💕";
   position: absolute;
@@ -21,7 +21,7 @@ body {
   to { transform: translateY(-10vh); }
 }
 
-/* CARD */
+/* 💌 CARD */
 .card {
   position: absolute;
   top: 50%;
@@ -46,7 +46,7 @@ h1 {
   margin: 15px 0;
 }
 
-/* GIFS */
+/* 🎞️ GIFS */
 .gif {
   width: 170px;
 }
@@ -56,7 +56,7 @@ h1 {
   margin-top: 10px;
 }
 
-/* BUTTONS */
+/* 🔘 BUTTONS */
 .buttons {
   margin-top: 20px;
 }
@@ -80,7 +80,7 @@ button {
   background: #eee;
 }
 
-/* LOVE SCREEN */
+/* 💖 LOVE SCREEN */
 .love-screen {
   position: absolute;
   top: 50%;
@@ -102,7 +102,7 @@ button {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* MOBILE */
+/* 📱 MOBILE */
 @media (max-width: 600px) {
   h1 { font-size: 2.1rem; }
   .question { font-size: 1.5rem; }
